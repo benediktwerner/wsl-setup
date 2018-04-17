@@ -29,7 +29,6 @@ source /usr/share/bash-completion/completions/git
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto verbose git"
-# export GIT_PS1_SHOWCOLORHINTS=1
 export PS1=" λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]$(__git_ps1 " [%s]")\[\e[m\]» "
 
 LS_COLORS=$LS_COLORS:'ow=01;42:'; export LS_COLORS
