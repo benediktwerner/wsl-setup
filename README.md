@@ -31,5 +31,12 @@ Adjust `.bash_aliases` according to the directory structure.
 1. Append the contents of the repositories `.bashrc` file.
 2. Comment out the "HISTSIZE=.." and "HISTFILESIZE=.." lines
 
+## Install vagrant
+1. Install VirtualBox on *Windows*
+2. Download vagrant for *Debian* (64bit)
+3. Install vagrant on *WSL*: `dpkg -i vagrant_..._64.deb`
+4. Add VirtualBox to the path: `export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox`
+5. Set `$VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1`
+
 ## Install stuff
 - GPG
