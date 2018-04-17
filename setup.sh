@@ -6,9 +6,6 @@ add-apt-repository ppa:git-core/ppa
 apt update
 apt install git
 
-echo "Downloading git prompt script ..."
-wget -O ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-
 echo "Copying dotfiles ..."
 cp dotfiles/* ~/
 

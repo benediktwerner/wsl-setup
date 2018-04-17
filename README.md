@@ -20,7 +20,6 @@ apt install git
 1. Set name, email and key
 2. Set line endings
 3. Set gpgsign = true
-4. Download the git prompt script from `https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh`.
 
 ## Copy dotfiles
 ```bash
