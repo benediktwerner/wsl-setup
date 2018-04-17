@@ -4,6 +4,8 @@ export unis="/mnt/c/Uni/SS17"
 export uniw="/mnt/c/Uni/WS1718"
 export dev="/mnt/c/dev"
 
+alias ..="cd .."
+alias ...="cd ../.."
 alias bene="cd /mnt/c/Users/Bene"
 alias uni="cd /mnt/c/Uni"
 alias unis="cd /mnt/c/Uni/SS18"
@@ -14,14 +16,10 @@ alias tutor="cd /mnt/c/Uni/WS1718/Tutor-PGdP"
 alias bx="unis; cd bx"
 
 alias l="ls -alFh"
-alias ..="cd .."
-alias ...="cd ../.."
 alias md="mkdir -p"
-
 alias o="less -q"
 alias gits="git status"
 alias clip="wcmd clip"
-alias open="wstart"
 alias sha384="openssl dgst -sha384 -binary | openssl enc -base64 -A"
 alias untar="tar -xzf"
 
