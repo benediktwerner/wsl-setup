@@ -1,3 +1,33 @@
+# Sample .bashrc for SuSE Linux
+# Copyright (c) SuSE GmbH Nuernberg
+
+# There are 3 different types of shells in bash: the login shell, normal shell
+# and interactive shell. Login shells read ~/.profile and interactive shells
+# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
+# settings made here will also take effect in a login shell.
+#
+# NOTE: It is recommended to make language settings in ~/.profile rather than
+# here, since multilingual X sessions would not work properly if LANG is over-
+# ridden in every subshell.
+
+# Some applications read the EDITOR variable to determine your favourite text
+# editor. So uncomment the line below and enter the editor of your choice :-)
+export EDITOR=/usr/bin/vim
+#export EDITOR=/usr/bin/mcedit
+
+# For some news readers it makes sense to specify the NEWSSERVER variable here
+#export NEWSSERVER=your.news.server
+
+# If you want to use a Palm device with Linux, uncomment the two lines below.
+# For some (older) Palm Pilots, you might need to set a lower baud rate
+# e.g. 57600 or 38400; lowest is 9600 (very slow!)
+#
+#export PILOTPORT=/dev/pilot
+#export PILOTRATE=115200
+
+test -s ~/.alias && . ~/.alias || true
+
+
 ### CUSTOM STUFF ###
 # SSH AGENT
 if [ -z "$(pgrep ssh-agent)" ]; then
@@ -15,24 +45,13 @@ fi
 
 
 # GPG Agent
-GPG_PROCESS=`cut -d: -f 2 $HOME/.gpg-agent-info 2> /dev/null`
-if test -f $HOME/.gpg-agent-info && kill -0 ${GPG_PROCESS} 2> /dev/null && [[ ${GPG_PROCESS} == `pgrep -x -u "${USER}" gpg-agent` ]]; then
-    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
-else
-    if ls /tmp/gpg-* &> /dev/null; then
-        rm -r /tmp/gpg-*
-    fi
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
-fi
-export GPG_TTY=`tty`
-export GPG_AGENT_INFO
-
+eval "$(gpg-agent --daemon 2> /dev/null)"
 
 # Git autocompletion
-source /usr/share/bash-completion/completions/git
+source /etc/bash_completion.d/git.sh
 
 # Git prompt
-source ~/.git-prompt.sh
+source /etc/bash_completion.d/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto verbose git"
 export PS1=' λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]$(__git_ps1 " [%s]")\[\e[93m\]»\[\e[m\] '
