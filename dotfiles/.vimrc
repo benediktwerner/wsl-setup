@@ -1,6 +1,8 @@
 set bg=dark
 inoremap <C-c> <Esc>
 
+cmap w!! w !sudo tee > /dev/null %
+
 set path+=**
 
 set wildmenu
