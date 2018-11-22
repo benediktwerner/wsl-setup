@@ -6,7 +6,8 @@
 	default = matching
 [core]
 	autocrlf = false
-	excludesfile = /root/.gitignore
+	excludesfile = ~/.gitignore
 	eol = lf
+	pager = less -F
 [commit]
 	gpgsign = true

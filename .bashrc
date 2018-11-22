@@ -47,6 +47,9 @@ fi
 # GPG Agent
 eval "$(gpg-agent --daemon 2> /dev/null)"
 
+# Man page use default
+export MAN_POSIXLY_CORRECT=1
+
 # Git autocompletion
 source /etc/bash_completion.d/git.sh
 
@@ -74,6 +77,10 @@ export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
 
 
+# Windows PATH
+export PATH="$PATH:/mnt/c/Windows/System32"
+
+
 # Useful functions
 function up() {
   times=$1
@@ -81,4 +88,26 @@ function up() {
     cd ..
     times=$(($times - 1))
   done
+}
+
+function extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1    ;;
+      *.tar.gz)    tar xzf $1    ;;
+      *.tar.xz)    tar Jxf $1    ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       rar x $1       ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xf $1     ;;
+      *.tbz2)      tar xjf $1    ;;
+      *.tgz)       tar xzf $1    ;;
+      *.zip)       unzip -d `echo $1 | sed 's/\(.*\)\.zip/\1/'` $1;;
+      *.Z)         uncompress $1  ;;
+      *.7z)        7z x $1        ;;
+      *)           echo "don't know how to extract '$1'" ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
 }

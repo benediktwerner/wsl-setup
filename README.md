@@ -25,7 +25,7 @@ apt install git
 ```bash
 cp dotfiles/* ~/
 ```
-Adjust `.bash_aliases` according to the directory structure.
+Adjust `.aliases` according to the directory structure.
 
 ## Adjust `.bashrc`
 1. Append the contents of the repositories `.bashrc` file.
