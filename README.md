@@ -38,5 +38,17 @@ Adjust `.aliases` according to the directory structure.
 4. Add VirtualBox to the path: `export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox`
 5. Set `$VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1`
 
-## Install stuff
-- GPG
+## Install MySQL / MariaDB
+1. `zypper in mariadb mariadb-tools`
+2. `sudo /usr/lib/mysql/mysql-systemd-helper install`
+3. Ensure `/var/lib/mysql` is owned by the MySQL user
+4. To start mysql if systemd is not available use the `start-mysql` alias from `.alias`
+
+## GPG
+1. `sudo zypper in pinentry`
+2. `gpg2 --import <key-file>`
+3. `gpg2 --import <secret-key-file>`
+
+### To export keys
+1. gpg2 -a --output gpg-key.asc --export
+2. gpg2 -a --output gpg-secret-key.asc --export-secret-keys
