@@ -5,7 +5,7 @@
 [push]
 	default = matching
 [core]
-	autocrlf = false
+	autocrlf = input
 	excludesfile = ~/.gitignore
 	eol = lf
 	pager = less -F
