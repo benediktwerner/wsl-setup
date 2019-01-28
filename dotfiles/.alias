@@ -23,11 +23,10 @@ alias untar="tar -xzf"
 alias start-mysql="sudo -b /usr/lib/mysql/mysql-systemd-helper start &> /dev/null"
 
 alias wcmd="/mnt/c/Windows/System32/cmd.exe /c"
-alias open="wcmd explorer"
-alias code="wcmd code"
+function open () { path_to_open=$(wslpath -w "$@"); wcmd explorer "$path_to_open"; }
+function code () { path_to_open=$(wslpath -w "$@"); wcmd code "$path_to_open"; }
 alias clip="wcmd clip"
 alias dotnet="wcmd dotnet"
 alias javac="wcmd javac -encoding utf-8"
 alias java="wcmd java"
-
-alias cmd="wcmd start cmd.exe"
+alias cmd="wcmd start"
