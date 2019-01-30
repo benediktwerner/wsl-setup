@@ -54,7 +54,7 @@ export MAN_POSIXLY_CORRECT=1
 source /etc/bash_completion.d/git.sh
 
 # Git prompt
-source /etc/bash_completion.d/git-prompt.sh
+source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto verbose git"
 export PS1=' λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]$(__git_ps1 " [%s]")\[\e[93m\]»\[\e[m\] '
@@ -76,10 +76,12 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
 
+# PATH
+export PATH="$PATH:$HOME/.npm-global/bin"       # NPM
+export PATH="$PATH:/usr/local/go/bin"           # Go
+export PATH="$PATH:/mnt/c/Windows/System32"     # Windows
 
-# Windows PATH
-export PATH="$PATH:/mnt/c/Windows/System32"
-
+export GOPATH="$HOME/go"
 
 # Useful functions
 function up() {
@@ -90,21 +92,21 @@ function up() {
   done
 }
 
-function extract () {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1    ;;
-      *.tar.gz)    tar xzf $1    ;;
-      *.tar.xz)    tar Jxf $1    ;;
-      *.bz2)       bunzip2 $1     ;;
-      *.rar)       rar x $1       ;;
-      *.gz)        gunzip $1      ;;
-      *.tar)       tar xf $1     ;;
-      *.tbz2)      tar xjf $1    ;;
-      *.tgz)       tar xzf $1    ;;
-      *.zip)       unzip -d `echo $1 | sed 's/\(.*\)\.zip/\1/'` $1;;
-      *.Z)         uncompress $1  ;;
-      *.7z)        7z x $1        ;;
+function x () {
+  if [ -f "$1" ] ; then
+    case "$1" in
+      *.tar.bz2)   tar xjf "$1"    ;;
+      *.tar.gz)    tar xzf "$1"    ;;
+      *.tar.xz)    tar Jxf "$1"    ;;
+      *.bz2)       bunzip2 "$1"    ;;
+      *.rar)       rar x "$1"      ;;
+      *.gz)        gunzip "$1"     ;;
+      *.tar)       tar xf "$1"     ;;
+      *.tbz2)      tar xjf "$1"    ;;
+      *.tgz)       tar xzf "$1"    ;;
+      *.zip)       unzip "$1"      ;;
+      *.Z)         uncompress "$1" ;;
+      *.7z)        7z x "$1"       ;;
       *)           echo "don't know how to extract '$1'" ;;
     esac
   else
