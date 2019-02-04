@@ -1,8 +1,5 @@
 # My WSL Setup
 
-## Setup script
-You can also simply run the `setup.sh` script to get started.
-
 ## Silence the bell (at least sometimes ...)
 ```bash
 echo 'set bell-style none' >> ~/.inputrc
