@@ -8,6 +8,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias l="ls -laFh"
 alias md="mkdir -pv"
+alias sudo="sudo "
 
 alias bene="cd /mnt/c/Users/Bene"
 alias dev="cd /mnt/d/dev"
