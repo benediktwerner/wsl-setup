@@ -30,7 +30,10 @@ alias dotnet="wcmd dotnet"
 alias javac="wcmd javac -encoding utf-8"
 alias java="wcmd java"
 alias cmd="wcmd start"
-alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
+
+code () {
+    /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$@" &>/dev/null &disown;
+}
 
 winpath () {
     if [ -z "$1" ]; then
