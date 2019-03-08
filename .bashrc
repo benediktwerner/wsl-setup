@@ -93,23 +93,25 @@ function up() {
 }
 
 function x () {
-  if [ -f "$1" ] ; then
-    case "$1" in
-      *.tar.bz2)   tar xjf "$1"    ;;
-      *.tar.gz)    tar xzf "$1"    ;;
-      *.tar.xz)    tar Jxf "$1"    ;;
-      *.bz2)       bunzip2 "$1"    ;;
-      *.rar)       rar x "$1"      ;;
-      *.gz)        gunzip "$1"     ;;
-      *.tar)       tar xf "$1"     ;;
-      *.tbz2)      tar xjf "$1"    ;;
-      *.tgz)       tar xzf "$1"    ;;
-      *.zip)       unzip "$1"      ;;
-      *.Z)         uncompress "$1" ;;
-      *.7z)        7z x "$1"       ;;
-      *)           echo "don't know how to extract '$1'" ;;
-    esac
-  else
-    echo "'$1' is not a valid file!"
-  fi
+  for file in "$@"; do
+    if [ -f "$file" ] ; then
+      case "$file" in
+        *.tar.bz2)   tar xjf "$file"    ;;
+        *.tar.gz)    tar xzf "$file"    ;;
+        *.tar.xz)    tar Jxf "$file"    ;;
+        *.bz2)       bunzip2 "$file"    ;;
+        *.rar)       rar x "$file"      ;;
+        *.gz)        gunzip "$file"     ;;
+        *.tar)       tar xf "$file"     ;;
+        *.tbz2)      tar xjf "$file"    ;;
+        *.tgz)       tar xzf "$file"    ;;
+        *.zip)       unzip "$file"      ;;
+        *.Z)         uncompress "$file" ;;
+        *.7z)        7z x "$file"       ;;
+        *)           echo "don't know how to extract '$file'" ;;
+      esac
+    else
+      echo "'$file' is not a valid file!"
+    fi
+  done
 }
