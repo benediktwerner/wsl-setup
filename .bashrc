@@ -83,6 +83,10 @@ export PATH="$PATH:/mnt/c/Windows/System32"     # Windows
 
 export GOPATH="$HOME/go"
 
+export DISPLAY=:0
+export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+
+
 # Useful functions
 function up() {
   times=$1
