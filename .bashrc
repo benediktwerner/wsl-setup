@@ -105,7 +105,7 @@ function x () {
         *.tar.xz)    tar Jxf "$file"    ;;
         *.bz2)       bunzip2 "$file"    ;;
         *.rar)       rar x "$file"      ;;
-        *.gz)        gunzip "$file"     ;;
+        *.gz)        gunzip -k "$file"  ;;
         *.tar)       tar xf "$file"     ;;
         *.tbz2)      tar xjf "$file"    ;;
         *.tgz)       tar xzf "$file"    ;;
