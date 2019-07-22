@@ -7,6 +7,9 @@ set path+=**
 
 set wildmenu
 
+set undodir=~/.vim_undo
+set undofile
+
 set number
 set tabstop=4
 set expandtab
