@@ -23,6 +23,8 @@ alias sha384="openssl dgst -sha384 -binary | openssl enc -base64 -A"
 alias untar="tar -xzf"
 
 alias start-mysql="sudo -b /usr/lib/mysql/mysql-systemd-helper start &> /dev/null"
+alias zyppref="sudo zypper clean -M && sudo zypper ref"
+alias zyppdup="zyppref && sudo zypper dup"
 
 alias wcmd="/mnt/c/Windows/System32/cmd.exe /c"
 alias clip="wcmd clip"
