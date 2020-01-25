@@ -1,7 +1,7 @@
 export bene="/mnt/c/Users/Bene"
 export uni="/mnt/d/Uni"
-export unis="/mnt/d/Uni/4-SS-18"
-export uniw="/mnt/d/Uni/5-WS-18-19"
+export unis="/mnt/d/Uni/6-SS-18"
+export uniw="/mnt/d/Uni/7-WS-18-19"
 export dev="/mnt/d/dev"
 
 alias ..="cd .."
@@ -13,11 +13,10 @@ alias sudo="sudo "
 alias bene="cd /mnt/c/Users/Bene"
 alias dev="cd /mnt/d/dev"
 alias uni="cd /mnt/d/Uni"
-alias unis="cd /mnt/d/Uni/4-SS-18"
-alias uniw="cd /mnt/d/Uni/5-WS-18-19"
-alias tutor="cd /mnt/d/Uni/5-WS-18-19/Tutor-PGdP"
-alias bx="cd /mnt/d/Uni/4-SS-18/bx"
+alias unis="cd /mnt/d/Uni/6-SS-18"
+alias uniw="cd /mnt/d/Uni/7-WS-18-19"
 
+alias git="hub"
 alias gits="git status"
 alias sha384="openssl dgst -sha384 -binary | openssl enc -base64 -A"
 alias untar="tar -xzf"
@@ -32,6 +31,7 @@ alias dotnet="wcmd dotnet"
 alias javac="wcmd javac -encoding utf-8"
 alias java="wcmd java"
 alias cmd="wcmd start"
+alias clear="wcmd cls"
 
 code () {
     /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$@" &>/dev/null &disown;
