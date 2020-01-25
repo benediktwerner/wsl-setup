@@ -1,2 +1,3 @@
 git_exclude
+.mypy_cache
 *.swp
