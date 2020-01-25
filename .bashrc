@@ -52,6 +52,7 @@ export MAN_POSIXLY_CORRECT=1
 
 # Git autocompletion
 source /etc/bash_completion.d/git.sh
+source /etc/bash_completion.d/hub.bash_completion.sh
 
 # Git prompt
 source ~/.git-prompt.sh
