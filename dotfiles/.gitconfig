@@ -2,13 +2,24 @@
 	email = 1benediktwerner@gmail.com
 	name = Benedikt Werner
 	signingkey = 1DBFF0F8E9E121EB
-[push]
-	default = matching
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore
 	eol = lf
 	pager = less -F
+[alias]
+    c = commit
+    s = status
+    last = log -1 HEAD
+[push]
+    default = simple
+[help]
+    autoCorrect = 1
+[url "git@github.com:"]
+    insteadOf = gh:
+[diff]
+    algorithm = patience
+    compactionHeuristic = true
 [commit]
 	gpgsign = true
 [hub]

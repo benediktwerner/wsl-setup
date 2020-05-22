@@ -16,7 +16,6 @@ alias uni="cd /mnt/d/Uni"
 
 alias git="hub"
 alias gits="git status"
-alias gitc="git commit"
 alias sha384="openssl dgst -sha384 -binary | openssl enc -base64 -A"
 alias untar="tar -xzf"
 
