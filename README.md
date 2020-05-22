@@ -49,3 +49,14 @@ Adjust `.aliases` according to the directory structure.
 ### To export keys
 1. gpg2 -a --output gpg-key.asc --export
 2. gpg2 -a --output gpg-secret-key.asc --export-secret-keys
+
+## Useful commands to install
+- tealdeer/tldr
+- ripgrep/rg
+- hexd
+- tokei
+- fd
+- bat
+- tree
+- p7zip
+- hub
