@@ -81,8 +81,12 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
 export PATH="$PATH:$HOME/.npm-global/bin"       # NPM
 export PATH="$PATH:/usr/local/go/bin"           # Go
 export PATH="$PATH:/mnt/c/Windows/System32"     # Windows
+export PATH="$HOME/.cargo/bin:$PATH"            # Rust
 
 export GOPATH="$HOME/go"
+
+export RUST_BACKTRACE=1
+export CARGO_TARGET_DIR="$HOME/.cargo/target"
 
 export DISPLAY=:0
 export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
