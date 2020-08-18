@@ -96,13 +96,10 @@ export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
 # It's usually defined by the bash-completion package but it sucks so I don't want it installed
 
 _filedir() {
-    compopt -o filenames
+    COMPREPLY=()
+    compopt -o bashdefault -o default
     if [[ $1 == -d ]]; then
-        COMPREPLY=($(compgen -d -- "$cur"))
-    elif [[ -z $1 ]]; then
-        COMPREPLY=($(compgen -f -- "$cur"))
-    else
-        COMPREPLY=($(compgen -f -X "!*.$1" -- "$cur"))
+        compopt -o dirnames
     fi
 }
 
