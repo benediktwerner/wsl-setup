@@ -92,6 +92,21 @@ export DISPLAY=:0
 export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
 
 
+# This is used by some bash-completion scripts
+# It's usually defined by the bash-completion package but it sucks so I don't want it installed
+
+_filedir() {
+    compopt -o filenames
+    if [[ $1 == -d ]]; then
+        COMPREPLY=($(compgen -d -- "$cur"))
+    elif [[ -z $1 ]]; then
+        COMPREPLY=($(compgen -f -- "$cur"))
+    else
+        COMPREPLY=($(compgen -f -X "!*.$1" -- "$cur"))
+    fi
+}
+
+
 # Useful functions
 function up() {
   times=$1
