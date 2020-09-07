@@ -27,3 +27,6 @@ autocmd GUIEnter * set visualbell t_vb=
 " Fix vim starting in replace mode.
 " Taken from: https://superuser.com/questions/1284561/why-is-vim-starting-in-replace-mode
 set t_u7=
+
+" Always use tabs instead of spaces in Makefiles
+autocmd FileType make setlocal noexpandtab
