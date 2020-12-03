@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+import subprocess, sys
+
+subprocess.run(["/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"] + sys.argv[1:])

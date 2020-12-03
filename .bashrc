@@ -89,7 +89,7 @@ export RUST_BACKTRACE=1
 export CARGO_TARGET_DIR="$HOME/.cargo/target"
 
 export DISPLAY=:0
-export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+export BROWSER="browser"
 
 
 # This is used by some bash-completion scripts
