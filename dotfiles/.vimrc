@@ -30,3 +30,8 @@ set t_u7=
 
 " Always use tabs instead of spaces in Makefiles
 autocmd FileType make setlocal noexpandtab
+
+set mouse=a
+
+command Copy set mouse=|set nonumber
+command NoCopy set mouse=a|set number

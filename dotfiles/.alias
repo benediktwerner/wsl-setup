@@ -39,7 +39,7 @@ code () {
 
 winpath () {
     if [ -z "$1" ]; then
-        echo "."
+        wslpath -w "."
     else
         wslpath -w "$1"
     fi

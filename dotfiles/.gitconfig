@@ -1,26 +1,29 @@
 [user]
-	email = 1benediktwerner@gmail.com
-	name = Benedikt Werner
-	signingkey = 1DBFF0F8E9E121EB
+        email = 1benediktwerner@gmail.com
+        name = Benedikt Werner
+        signingkey = 1DBFF0F8E9E121EB
 [core]
-	autocrlf = input
-	excludesfile = ~/.gitignore
-	eol = lf
-	pager = less -F
+        autocrlf = input
+        excludesfile = ~/.gitignore
+        eol = lf
+        pager = less -F
 [alias]
-    c = commit
-    s = status
-    last = log -1 HEAD
+        c = commit
+        s = status
+        last = log -1 HEAD
+        graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]
-    default = simple
+        default = simple
 [help]
-    autoCorrect = 1
+        autoCorrect = 1
 [url "git@github.com:"]
-    insteadOf = gh:
+        insteadOf = gh:
 [diff]
-    algorithm = patience
-    compactionHeuristic = true
+        algorithm = patience
+        compactionHeuristic = true
 [commit]
-	gpgsign = true
+        gpgsign = true
 [hub]
-	protocol = ssh
+        protocol = ssh
+[pull]
+        ff = only
