@@ -3,13 +3,18 @@
         name = Benedikt Werner
         signingkey = 1DBFF0F8E9E121EB
 [core]
-        autocrlf = input
+        autocrlf = false
+        safecrlf = false
         excludesfile = ~/.gitignore
         eol = lf
         pager = less -F
 [alias]
         c = commit
         s = status
+        f = fetch
+        fup = fetch upstream
+        rup = reset --hard @{upstream}
+        pushh = push origin HEAD
         last = log -1 HEAD
         graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]
