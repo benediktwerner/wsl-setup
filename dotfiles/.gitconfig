@@ -7,7 +7,19 @@
         safecrlf = false
         excludesfile = ~/.gitignore
         eol = lf
-        pager = less -F
+        pager = delta
+[init]
+        defaultBranch = "master"
+[delta]
+        line-numbers = true
+#        side-by-side = true
+        minus-style = "syntax auto"
+        minus-emph-style = "syntax auto"
+        plus-style = "syntax 22"
+        plus-emph-style = "syntax 34"
+        line-numbers-minus-style = "9"
+        line-numbers-zero-style = "8"
+        line-numbers-plus-style = "10"
 [alias]
         c = commit
         s = status
@@ -24,6 +36,7 @@
 [url "git@github.com:"]
         insteadOf = gh:
 [diff]
+        colorMoved = default
         algorithm = patience
         compactionHeuristic = true
 [commit]
