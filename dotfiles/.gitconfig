@@ -12,7 +12,6 @@
         defaultBranch = "master"
 [delta]
         line-numbers = true
-#        side-by-side = true
         minus-style = "syntax auto"
         minus-emph-style = "syntax auto"
         plus-style = "syntax 22"
@@ -31,6 +30,8 @@
         graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]
         default = simple
+[pull]
+        ff = only
 [help]
         autoCorrect = 1
 [url "git@github.com:"]
@@ -43,5 +44,3 @@
         gpgsign = true
 [hub]
         protocol = ssh
-[pull]
-        ff = only
