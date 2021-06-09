@@ -18,6 +18,10 @@ apt install git
 2. Set line endings
 3. Set gpgsign = true
 
+# Install gistatus
+sudo git clone --depth=1 https://gitee.com/romkatv/gitstatus.git /opt/gitstatus
+sudo cp gitstatus.prompt.sh /opt/gitstatus/gitstatus.prompt.sh
+
 ## Copy dotfiles
 ```bash
 cp dotfiles/* ~/

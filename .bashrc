@@ -55,11 +55,7 @@ source /etc/bash_completion.d/git.sh
 # source /etc/bash_completion.d/hub.bash_completion.sh
 
 # Git prompt
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUPSTREAM="auto verbose git"
-export PS1=' λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]$(__git_ps1 " [%s]")\[\e[93m\]»\[\e[m\] '
-
+source /opt/gitstatus/gitstatus.prompt.sh
 
 LS_COLORS=$LS_COLORS:'ow=01;42:'; export LS_COLORS
 
