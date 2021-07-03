@@ -88,4 +88,4 @@ PROMPT_COMMAND=gitstatus_prompt_update
 # Enable promptvars so that ${GITSTATUS_PROMPT} in PS1 is expanded.
 shopt -s promptvars
 
-PS1=' λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]${GITSTATUS_PROMPT}\[\e[93m\]»\[\e[m\]'
+PS1=' λ \[\e[34m\]\w\[\e[m\]\[\e[31m\]${GITSTATUS_PROMPT}\[\e[93m\]»\[\e[m\] '
