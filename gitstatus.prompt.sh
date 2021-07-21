@@ -59,8 +59,8 @@ function gitstatus_prompt_update() {
   (( VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND )) && p+=" "
   # ⇢42 if ahead of the push remote; no leading space if also behind: ⇠42⇢42.
   (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && p+="⇢${VCS_STATUS_PUSH_COMMITS_AHEAD}"
-  # *42 if have stashes.
-  # (( VCS_STATUS_STASHES        )) && p+=" *${VCS_STATUS_STASHES}"
+  # @42 if have stashes.
+  (( VCS_STATUS_STASHES        )) && p+=" @${VCS_STATUS_STASHES}"
   # 'merge' if the repo is in an unusual state.
   [[ -n "$VCS_STATUS_ACTION"   ]] && p+=" ${VCS_STATUS_ACTION}"
   # ~42 if have merge conflicts.
