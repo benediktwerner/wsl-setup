@@ -21,7 +21,7 @@ fi
 #      ⇡42  local branch is 42 commits ahead of the remote
 #      ⇠42  local branch is 42 commits behind the push remote
 #      ⇢42  local branch is 42 commits ahead of the push remote
-#      *42  42 stashes
+#      @42  42 stashes
 #    merge  merge in progress
 #      ~42  42 merge conflicts
 #      +42  42 staged changes
