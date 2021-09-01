@@ -23,12 +23,21 @@
         line-numbers-zero-style = "8"
         line-numbers-plus-style = "10"
 [alias]
-        c = commit
         s = status
+        c = commit
+        ca = commit --amend
+        a = add -u
+        aa = add -A
+        ap = add -p
+        d = diff
+        dc = diff --cached
+        r = remote -v
+        b = branch
         f = fetch
         fup = fetch upstream
         rup = reset --hard @{upstream}
         frup = !git fetch upstream && git reset --hard @{upstream} && :
+        pullr = pull --rebase
         pushh = push origin HEAD
         last = log -1 HEAD
         graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
