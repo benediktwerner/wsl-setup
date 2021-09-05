@@ -26,6 +26,9 @@
         s = status
         c = commit
         ca = commit --amend
+        co = checkout
+        com = checkout master
+        cob = checkout -b
         a = add -u
         aa = add -A
         ap = add -p
@@ -39,6 +42,7 @@
         frup = !git fetch upstream && git reset --hard @{upstream} && :
         pullr = pull --rebase
         pushh = push origin HEAD
+        pushm = push upstream master
         last = log -1 HEAD
         graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]
