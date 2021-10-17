@@ -24,8 +24,10 @@
         line-numbers-plus-style = "10"
 [alias]
         s = status
-        c = commit
-        ca = commit --amend
+        c = commit -v
+        ac = commit -av
+        ca = commit -v --amend
+        aca = commit -av --amend
         co = checkout
         com = checkout master
         cob = checkout -b
