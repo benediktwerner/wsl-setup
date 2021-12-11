@@ -33,15 +33,21 @@ alias java="wcmd java"
 alias cmd="wcmd start"
 alias clear="wcmd cls"
 
-code () {
-    /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$@" &>/dev/null &disown;
-}
-
 winpath () {
     if [ -z "$1" ]; then
         wslpath -w "."
     else
         wslpath -w "$1"
+    fi
+}
+
+code () {
+    path=$(realpath "$1")
+    if [[ $path = /mnt/* ]];
+    then
+        wcmd code "$1"
+    else
+        /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$1"
     fi
 }
 
