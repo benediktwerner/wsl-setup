@@ -42,13 +42,21 @@ winpath () {
 }
 
 code () {
-    path=$(realpath "$1")
+    path=$(realpath "${@: -1}")
     if [[ $path = /mnt/* ]];
     then
-        wcmd code "$1"
+        wcmd code "$@"
     else
-        /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$1"
+        /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code "$@"
     fi
+}
+
+wcd () {
+    cd "`wslpath "$1"`"
+}
+
+wcp () {
+    wslpath -w "." | clip
 }
 
 open () {

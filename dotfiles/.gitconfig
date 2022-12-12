@@ -47,6 +47,7 @@
         pushm = push upstream master
         last = log -1 HEAD
         graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        bu= !git branch -u origin/$(git rev-parse --abbrev-ref HEAD) && :
 [push]
         default = simple
 [help]
