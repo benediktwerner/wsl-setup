@@ -29,7 +29,7 @@
         ca = commit -v --amend
         aca = commit -av --amend
         co = checkout
-        com = checkout master
+        com = !git checkout $(git rev-parse --abbrev-ref origin/HEAD | cut -c8-)
         cob = checkout -b
         a = add -u
         aa = add -A
@@ -47,7 +47,8 @@
         pushm = push upstream master
         last = log -1 HEAD
         graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        bu= !git branch -u origin/$(git rev-parse --abbrev-ref HEAD) && :
+        bu = !git branch -u origin/$(git rev-parse --abbrev-ref HEAD) && :
+        fm = remote set-head origin -a
 [push]
         default = simple
 [help]
